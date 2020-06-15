@@ -6,12 +6,10 @@ using namespace std;
 
 int main() 
 {
-	srand(1);
 	LinkedList List;
 
 	for (int i = 0; i < 7; i++) {
-		int temp = rand();
-		List.pushBack(temp);
+		List.pushBack(i);
 	}
 
 	for (int i = 0; i < List.size(); i++) {

@@ -181,6 +181,21 @@ void LinkedList::remove(const size_t pos)
 
 }
 
+void LinkedList::removeFront()
+{
+	Node* removeNode = this->m_head;
+	this->m_head = m_head->next;
+
+	delete removeNode;
+	m_size--;
+
+}
+
+void LinkedList::removeBack()
+{
+	remove(m_size - 1);
+}
+
 void LinkedList::removeNextNode(Node* node)
 {
 	node->removeNext();
