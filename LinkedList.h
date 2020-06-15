@@ -35,7 +35,9 @@ public:
 	////
 
 	// доступ к значению элемента по индексу
-	const ValueType& operator[](const size_t pos) const;
+	const ValueType& operator[](const size_t pos) const {
+		return getNode(pos)->value;
+	}
 	ValueType& operator[](const size_t pos) {
 		return getNode(pos)->value;
 	}
@@ -68,8 +70,8 @@ public:
 
 	size_t size() const;
 private:
-	Node* m_head;
-	size_t	m_size;
+	Node* _head;
+	size_t	_size;
 
 	void forceNodeDelete(Node* node);
 };
