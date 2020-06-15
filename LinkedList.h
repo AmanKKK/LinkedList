@@ -36,7 +36,9 @@ public:
 
 	// доступ к значению элемента по индексу
 	const ValueType& operator[](const size_t pos) const;
-	ValueType& operator[](const size_t pos);
+	ValueType& operator[](const size_t pos) {
+		return getNode(pos)->value;
+	}
 	// доступ к узлу по индексу
 	LinkedList::Node* getNode(const size_t pos) const;
 
