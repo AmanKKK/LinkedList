@@ -12,7 +12,7 @@ class LinkedList
 	// поле с ключем в узел и, с учетом этого, поменять методы LinkedList 
 	// (доступ по ключу, поиск по ключу и т.д.)
 	struct Node {
-		Node(const ValueType& value, Node* next = nullptr);
+		Node(const ValueType& value, Node* next = nullptr); //  конструктор определения объекта типа LinkedList.
 		~Node();
 
 		void insertNext(const ValueType& value);
@@ -61,15 +61,15 @@ public:
 
 	// разворот списка
 	void reverse();						// изменение текущего списка
-	LinkedList reverse() const;			// полчение нового списка (для константных объектов)
+	LinkedList reverse() const;			// получение нового списка (для константных объектов)
 	LinkedList getReverseList() const;	// чтобы неконстантный объект тоже мог возвращать новый развернутый список
 
 	size_t size() const;
 private:
-	Node* _head;
-	size_t	_size;
+	Node* m_head;
+	size_t	m_size;
 
 	void forceNodeDelete(Node* node);
 };
 
-#endif // !LINKEDLIST_H
+#endif 
